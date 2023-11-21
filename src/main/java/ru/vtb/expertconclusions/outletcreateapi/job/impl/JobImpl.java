@@ -9,7 +9,7 @@ import ru.vtb.expertconclusions.outletcreateapi.service.workservice.WorkService;
 import java.util.List;
 
 import static ru.vtb.expertconclusions.outletcreateapi.util.Constant.pathInput;
-import static ru.vtb.expertconclusions.outletcreateapi.util.ManagedConstant.nameFile;
+import static ru.vtb.expertconclusions.outletcreateapi.util.ManagedConstant.NAME_FILE;
 
 @Component
 public class JobImpl implements Job {
@@ -25,7 +25,7 @@ public class JobImpl implements Job {
 
     public void job() {
         System.out.println("job.job");
-        List<String> lines = inputService.input(pathInput, nameFile.name());
+        List<String> lines = inputService.input(pathInput, NAME_FILE.name());
         System.out.println(lines);
         lines = workService.getSPrint(lines);
         System.out.println(lines);

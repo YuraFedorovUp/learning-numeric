@@ -11,8 +11,8 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 
-import static ru.vtb.expertconclusions.outletcreateapi.util.ManagedConstant.shaffle;
-import static ru.vtb.expertconclusions.outletcreateapi.util.ManagedConstant.timeToWait;
+import static ru.vtb.expertconclusions.outletcreateapi.util.ManagedConstant.SHAFFLE;
+import static ru.vtb.expertconclusions.outletcreateapi.util.ManagedConstant.TIME_TO_WAIT;
 
 public class TextFieldTestWithTime extends JFrame {
 
@@ -42,7 +42,7 @@ public class TextFieldTestWithTime extends JFrame {
             // Создание панели с текстовыми полями
 
             try {
-                Thread.sleep(timeToWait);
+                Thread.sleep(TIME_TO_WAIT);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -70,7 +70,7 @@ public class TextFieldTestWithTime extends JFrame {
 
         worlds = getUniqWorld(worlds);
         while (true) {
-            if (shaffle.name().equals("on")) {
+            if (SHAFFLE.name().equals("on")) {
                 Collections.shuffle(worlds);
             }
             printMy(worlds);

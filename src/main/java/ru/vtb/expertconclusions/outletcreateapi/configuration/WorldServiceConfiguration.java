@@ -8,17 +8,16 @@ import ru.vtb.expertconclusions.outletcreateapi.service.printservice.world.World
 import ru.vtb.expertconclusions.outletcreateapi.service.printservice.world.impl.NumericServiceImpl;
 import ru.vtb.expertconclusions.outletcreateapi.service.printservice.world.impl.WorldServiceImpl;
 
+import static ru.vtb.expertconclusions.outletcreateapi.enams.NumericSwitchOnEnum.YES;
+import static ru.vtb.expertconclusions.outletcreateapi.util.ManagedConstant.NUMERIC_SWITCH_ON_ENUM;
+
 @Configuration
 public class WorldServiceConfiguration {
     @Bean
-    @ConditionalOnProperty(value = "learning.numeric.enabled", havingValue = "true")
     public WorldService worldServiceImpl() {
-        return new NumericServiceImpl();
-    }
-
-    @Bean
-    @ConditionalOnMissingBean(WorldService.class)
-    public WorldService worldServiceImpl1() {
+        if (NUMERIC_SWITCH_ON_ENUM == YES) {
+            return new NumericServiceImpl();
+        }
         return new WorldServiceImpl();
     }
 }

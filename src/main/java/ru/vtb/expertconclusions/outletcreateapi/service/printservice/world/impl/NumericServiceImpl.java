@@ -16,6 +16,11 @@ public class NumericServiceImpl implements WorldService {
     }
 
     private Integer getRandom(int maxRandomNumber) {
+//        int result = 99;
+//        while (result % 100 > 20) {
+//            result = (int) (Math.random() * maxRandomNumber);
+//        }
+//        return result;
         return (int) (Math.random() * maxRandomNumber);
     }
 }

@@ -1,13 +1,10 @@
 package ru.vtb.expertconclusions.outletcreateapi.service.printservice.world.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import ru.vtb.expertconclusions.outletcreateapi.data.Data;
 import ru.vtb.expertconclusions.outletcreateapi.service.printservice.world.WorldService;
 
 import java.util.Map;
-
-import static ru.vtb.expertconclusions.outletcreateapi.util.ManagedConstant.timeToSwitch;
 
 //@Component
 public class WorldServiceImpl implements WorldService {

@@ -1,12 +1,8 @@
 package ru.vtb.expertconclusions.outletcreateapi.data;
 
-import lombok.Builder;
-import lombok.Value;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
-
-import static ru.vtb.expertconclusions.outletcreateapi.util.ManagedConstant.timeToSwitch;
 
 @Component
 @lombok.Data

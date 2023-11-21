@@ -8,8 +8,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-import static ru.vtb.expertconclusions.outletcreateapi.util.ManagedConstant.shaffle;
-import static ru.vtb.expertconclusions.outletcreateapi.util.ManagedConstant.timeToWait;
+import static ru.vtb.expertconclusions.outletcreateapi.util.ManagedConstant.SHAFFLE;
+import static ru.vtb.expertconclusions.outletcreateapi.util.ManagedConstant.TIME_TO_WAIT;
 
 //@Component
 public class TextFieldTest extends JFrame {
@@ -24,7 +24,7 @@ public class TextFieldTest extends JFrame {
 //        smallField = new JTextField(15);
         while (true) {
             printMy(worlds);
-            if (shaffle.name().equals("on")) {
+            if (SHAFFLE.name().equals("on")) {
                 Collections.shuffle(worlds);
             }
         }
@@ -45,7 +45,7 @@ public class TextFieldTest extends JFrame {
             // Создание панели с текстовыми полями
 
             try {
-                Thread.sleep(timeToWait);
+                Thread.sleep(TIME_TO_WAIT);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

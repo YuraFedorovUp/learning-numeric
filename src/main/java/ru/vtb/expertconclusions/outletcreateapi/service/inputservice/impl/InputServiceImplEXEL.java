@@ -15,7 +15,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import static ru.vtb.expertconclusions.outletcreateapi.util.Constant.*;
-import static ru.vtb.expertconclusions.outletcreateapi.util.ManagedConstant.language;
+import static ru.vtb.expertconclusions.outletcreateapi.util.ManagedConstant.LANGUAGE;
 
 
 @Primary
@@ -74,7 +74,7 @@ public class InputServiceImplEXEL implements InputService {
         int i = 0;
         Cell cell = null;
         try {
-            int numberOfColomn = mapsLanguage.get(language);
+            int numberOfColomn = mapsLanguage.get(LANGUAGE);
             for (; i < numberOfColomn; i++) {
                 cell = cellIterator.next();
                 if (cell.getStringCellValue().isEmpty())

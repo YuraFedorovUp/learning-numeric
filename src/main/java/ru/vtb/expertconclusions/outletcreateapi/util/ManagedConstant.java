@@ -12,25 +12,25 @@ import static ru.vtb.expertconclusions.outletcreateapi.enams.NumericSwitchOnEnum
 public class ManagedConstant {
 
     //время в милисекундах на каждое cлово  1000L  - это 1 секунда
-    public final static Long timeToWait = 2300L;
+    public final static Long TIME_TO_WAIT = 1000L;
     //время в милисекундах на каждое упражнение  180000L  - это 3 секунды
-    public final static Long timeToSwitch = 3000000L;
+    public final static Long TIME_TO_SWITCH = 180000L*100;
 
     //язык
-    public final static LanguageEnam language = LanguageEnam.Russian;
+    public final static LanguageEnam LANGUAGE = LanguageEnam.Russian;
 //    public final static LanguageEnam language = LanguageEnam.English;
 
     // надо ли перемешивать список слов
 //    public final static ShaffleEnam shaffle = ShaffleEnam.off;
-    public final static ShaffleEnam shaffle = ShaffleEnam.on;
+    public final static ShaffleEnam SHAFFLE = ShaffleEnam.on;
 
 //    public final static NameFileEnam nameFile = NameFileEnam.dictionary;
-    public final static NameFileEnam nameFile = NameFileEnam.verb;
+    public final static NameFileEnam NAME_FILE = NameFileEnam.verb;
 
 
 
     //       public final static NumericSwitchOnEnum numericSwitchOnEnum = NO;
-    public final static NumericSwitchOnEnum numericSwitchOnEnum = YES;
+    public final static NumericSwitchOnEnum NUMERIC_SWITCH_ON_ENUM = YES;
 
 
     //   максимальное рандомное число
